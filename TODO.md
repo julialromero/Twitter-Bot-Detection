@@ -23,13 +23,14 @@
 
 
 2. Create network data structures with networkx
-    Each node is a data point. For each node we need to define some network around it. This network could be  6, 20, or X degrees of separation from the given node. We will create networks based off the following inter-account interactions obtained from the Twitter API. 
+    
+    - Each node is a data point. For each node we need to define some network around it. This network could be  6, 20, or X degrees of separation from the given node. We will create networks based off the following inter-account interactions obtained from the Twitter API. 
 
-    Limitations of this approach:
-    - nodes at the Xth degree of separation would be skewed. Only a subset of their neighbors are included.
-    - network properties could vary greatly based on value of X. Choosing X would require careful iterative exploration. 
+    - Limitations of this approach:
+        - nodes at the Xth degree of separation would be skewed. Only a subset of their neighbors are included.
+        - network properties could vary greatly based on value of X. Choosing X would require careful iterative exploration. 
 
-    Networks:
+    - Networks:
         - Directed: followers / following
         - Directed: likes -- need time series way to quantify
         - Directed: replies -- need time series way to quantify
