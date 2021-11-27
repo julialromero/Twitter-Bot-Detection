@@ -56,10 +56,10 @@
         
 
     4) Explore -- how does classifier performance differ *using only networks metrics listed above* compared to *using networks metrics in addition to extra non-networks features*. Non-networks features including: 
-        -daily tweet counts
-        -response rates
-        -time of day of activities recorded
-        -more
+        - daily tweet counts
+        - response rates
+        - time of day of activities recorded
+        - more
 
 
     5) Can we create new networks features to capture bot account properties? After EDA and understanding their behavior? Can we create time-series features that capture this?
