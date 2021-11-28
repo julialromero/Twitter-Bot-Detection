@@ -28,12 +28,14 @@
 
     - Limitations of this approach:
         - nodes at the Xth degree of separation would be skewed. Only a subset of their neighbors are included.
-        - network properties could vary greatly based on value of X. Choosing X would require careful iterative exploration. 
+        - network properties could vary greatly based on value of X. Choosing X would require careful iterative exploration.
+- KYLE EDIT: given that this is a real-world social media network, "six degrees of separation" likely holds and would probably give us literally almost all of Twitter -- we probably only need a few degrees of separation at most
 
     - Networks:
         - Directed: followers / following
         - Directed: likes -- need time series way to quantify
         - Directed: replies -- need time series way to quantify
+    - KYLE EDIT: do we necessarily need to worry about time series? quantity of replies and to whom might suffice, regardless of time. Although I guess you don't capture spammy behavior without time series. But perhaps our project should be exploratory, asking "how well can we predict bots SOLELY relying on network attributes, i.e. how much does network science tell us?"
 
 3. Compute network properties:
     1) Features to calculate:
@@ -43,10 +45,12 @@
         - can bot accounts be identified thru disassortative mixing behavior? Using attributes such as # followers, # following, # posts/day, response time
         - assortative mixing by node degree
         - I think we should omit metrics that capture number of edges shared with bot accounts since we don't have comprehensive list of labeled bot accounts.
+        - KYLE EDIT: also refer to the list of 1150 features used in the Botometer paper
 
 
     2) Exploratory Analyis: 
         - compare properties between bot-centered, human-centered, and random generated networks
+    - KYLE EDIT: not sure what you mean by human/bot-centered -- are you referring to the highest-degree node being a human/bot?
         
     
     3) Classifier (subject to change): Chose these for simplicity and because we won't have huge dataset.
