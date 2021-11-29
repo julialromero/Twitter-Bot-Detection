@@ -6,7 +6,7 @@
         - 698 bots, 0 humans
 
     - cresci-rtbust-2019 -- Manually annotated bot and human accounts. Labels and user objects.
-        - 353 bots, 340 humans
+        - 353 bots, 340 humans  (tweets in Italian)
 
     - vendor-purchased-2019 -- Fake follower accounts purchased from several companies. Labels and user objects.
         1087 bots, 0 humans
@@ -15,7 +15,8 @@
         - 42446 bots, 8092 humans
 
     - gilani-2017 -- Manually annotated human and bot accounts. Labels and user objects.
-        - 1090 bots, 1413 humans
+        - 1090 bots, 1413 humans (manually annotated)
+        - http://www-public.imtbs-tsp.eu/~farahbak/publications/Asonam_17.pdf
 
     - varol-2017 -- This dataset contains annotation of 2573 Twitter accounts. Annotation and data crawl is completed in April 2016.
         - 733 bots, 1495 humans
@@ -36,6 +37,7 @@
         - Directed: likes -- need time series way to quantify
         - Directed: replies -- need time series way to quantify
     - KYLE EDIT: do we necessarily need to worry about time series? quantity of replies and to whom might suffice, regardless of time. Although I guess you don't capture spammy behavior without time series. But perhaps our project should be exploratory, asking "how well can we predict bots SOLELY relying on network attributes, i.e. how much does network science tell us?"
+    - JULIA RESPONSE: we could start simple without considering time-series, and instead use frequency to weight the edges (that's what they do in the botometer paper).
 
 3. Compute network properties:
     1) Features to calculate:
@@ -71,3 +73,5 @@
         
         
     
+- Random things:
+    - bots have less reciprocated behavior compared to human accounts (botometer paper)
